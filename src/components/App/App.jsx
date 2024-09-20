@@ -1,4 +1,3 @@
-import style from "./App.module.css";
 import Heder from "../Heder/Heder.jsx";
 import RouteSection from "../RouteSection/RouteSection.jsx";
 

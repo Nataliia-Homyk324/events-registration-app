@@ -12,19 +12,13 @@
 .navLink {
     text-decoration: none;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    color: #101828;
+    color:blue;
     line-height: 1.5;
     transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navLinkActive {
-    color: #D84343;
-}
 
-.navLink:hover,
-.navLink:focus {
-    color: #D84343;
-}
+
