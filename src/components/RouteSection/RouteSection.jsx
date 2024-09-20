@@ -8,7 +8,7 @@ const NotFoundPage = lazy(() =>
 const EventsPage = lazy(() => import("../../pages/EventsPage/EventsPage.jsx"));
 const UsersPage = lazy(() => import("../../pages/UsersPage/UsersPage.jsx"));
 const RegisterPage = lazy(() =>
-  import("../../pages/ RegisterPage/RegisterPage.jsx")
+  import("../../pages/RegisterPage/RegisterPage.jsx")
 );
 const RouteSection = () => {
   return (
