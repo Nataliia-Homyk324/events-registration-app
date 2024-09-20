@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    padding: 24px 64px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #E0E0E0;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #101828;
+    line-height: 1.5;
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navLinkActive {
+    color: #D84343;
+}
+
+.navLink:hover,
+.navLink:focus {
+    color: #D84343;
+}
