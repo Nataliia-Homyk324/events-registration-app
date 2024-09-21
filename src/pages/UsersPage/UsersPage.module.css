@@ -1,7 +1,19 @@
 .container {
     margin: 0 auto;
     padding: 64px;
+    display:flex;
+    flex-direction: column;
+    
 }
+
+.search{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 .title {
     color: #000;

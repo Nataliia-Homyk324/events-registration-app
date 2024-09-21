@@ -8,9 +8,9 @@ const UsersPage = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    // Функція для отримання подій
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
@@ -28,13 +28,33 @@ const UsersPage = () => {
     fetchUsers();
   }, []);
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredUsers = users.filter((user) =>
+    user.fullName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className={style.container}>
-      <h2 className={style.title}> ``Awesome Event`` participans</h2>
+    <div className={style.UsersPage}>
+      <div className={style.search}>
+        <h2 className={style.title}>Users</h2>
+
+        <input
+          type="text"
+          placeholder="Search by name"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className={style.searchInput}
+        />
+      </div>
+
       {loading && <Loader />}
-      {error && <p>Sorry, we have not found the events for your request</p>}
-      <UsersList users={users} />
+      {error && <p>Error loading users</p>}
+      {!loading && !error && <UsersList users={filteredUsers} />}
     </div>
   );
 };
+
 export default UsersPage;
