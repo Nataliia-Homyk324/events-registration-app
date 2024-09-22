@@ -53,23 +53,25 @@ const EventsPage = () => {
 
       <EventsList events={events} />
 
-      <div className={style.pagination}>
-        <button
-          className={style.prevButton}
-          onClick={handlePrevPage}
-          disabled={page === 1}
-        >
-          Prev
-        </button>
+      {!loading && (
+        <div className={style.pagination}>
+          <button
+            className={style.prevButton}
+            onClick={handlePrevPage}
+            disabled={page === 1}
+          >
+            Prev
+          </button>
 
-        <button
-          className={style.nextButton}
-          onClick={handleNextPage}
-          disabled={!hasNextPage || page === totalPages}
-        >
-          Next
-        </button>
-      </div>
+          <button
+            className={style.nextButton}
+            onClick={handleNextPage}
+            disabled={!hasNextPage || page === totalPages}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 };
